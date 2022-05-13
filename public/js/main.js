@@ -71,3 +71,17 @@ function reiniciaJogo() {
     campo.removeClass("borda-vermelha");
     campo.removeClass("borda-verde");
 };
+
+function inserePlacar(){
+    console.log("Linha inserida no placar");    
+    var placar = $(".placar");
+    var corpoTabela = placar.find("tbody");
+    var corpoTabela = $(".placar").find("tbody");
+    var usuario = "Jean";
+    var numPalavras = $("#contador-palavras").text();
+    var linha = "<tr>"+
+                    "<td>"+ usuario + "</td>"+
+                    "<td>"+ numPalavras + "</td>"+
+                "</tr>";
+    corpoTabela.prepend(linha);
+}
